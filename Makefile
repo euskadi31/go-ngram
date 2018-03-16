@@ -39,5 +39,5 @@ cover: test
 	#@go tool cover -html=./coverage/test.cov
 
 bench:
-	@for PKG in $(PACKAGES); do go test -bench=. $$PKG || exit 1; done;
+	@for PKG in $(PACKAGES); do go test -benchmem -bench=. $$PKG || exit 1; done;
 
