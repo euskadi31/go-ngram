@@ -6,7 +6,6 @@ Ngram for Golang ![Last release](https://img.shields.io/github/release/euskadi31
 | Branch  | Status | Coverage |
 |---------|--------|----------|
 | master  | [![Build Status](https://img.shields.io/travis/euskadi31/go-ngram/master.svg)](https://travis-ci.org/euskadi31/go-ngram) | [![Coveralls](https://img.shields.io/coveralls/euskadi31/go-ngram/master.svg)](https://coveralls.io/github/euskadi31/go-ngram?branch=master) |
-| develop | [![Build Status](https://img.shields.io/travis/euskadi31/go-ngram/develop.svg)](https://travis-ci.org/euskadi31/go-ngram) | [![Coveralls](https://img.shields.io/coveralls/euskadi31/go-ngram/develop.svg)](https://coveralls.io/github/euskadi31/go-ngram?branch=develop) |
 
 
 > an **_n_-gram** is a contiguous sequence of _n_ items from a given sequence of text or speech.
