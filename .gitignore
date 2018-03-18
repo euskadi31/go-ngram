@@ -4,7 +4,4 @@
 vendor/
 coverage/
 
-sse-server
-!cmd/sse-server
-
 *.swp
