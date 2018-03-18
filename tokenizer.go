@@ -45,9 +45,6 @@ func (t tokenizer) Tokenize() []string {
 
 	for i := 0; i <= ridx-size; i++ {
 		end := i + size
-		if end >= len(runes) {
-			break
-		}
 
 		tokens[i] = t.content[runes[i]:runes[end]]
 	}
