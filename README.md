@@ -18,7 +18,7 @@ import (
 )
 
 func main() {
-    tokens := ngram.New("Hello", ngram.Bigram).Tokenize()
+    tokens := ngram.New(ngram.Bigram).Tokenize("Hello")
 
     fmt.Printf("%v\n", tokens) // ["He", "el", "ll", "lo"]
 }

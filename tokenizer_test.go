@@ -14,13 +14,13 @@ func TestTokenizerUnigram(t *testing.T) {
 	assert.Equal(
 		t,
 		[]string{"H", "e", "l", "l", "o"},
-		New("Hello", Unigram).Tokenize(),
+		New(Unigram).Tokenize("Hello"),
 	)
 
 	assert.Equal(
 		t,
 		[]string{"こ", "ん", "に", "ち", "は"},
-		New("こんにちは", Unigram).Tokenize(),
+		New(Unigram).Tokenize("こんにちは"),
 	)
 }
 
@@ -28,13 +28,13 @@ func TestTokenizerBigram(t *testing.T) {
 	assert.Equal(
 		t,
 		[]string{"He", "el", "ll", "lo"},
-		New("Hello", Bigram).Tokenize(),
+		New(Bigram).Tokenize("Hello"),
 	)
 
 	assert.Equal(
 		t,
 		[]string{"こん", "んに", "にち", "ちは"},
-		New("こんにちは", Bigram).Tokenize(),
+		New(Bigram).Tokenize("こんにちは"),
 	)
 }
 
@@ -42,30 +42,30 @@ func TestTokenizerTrigram(t *testing.T) {
 	assert.Equal(
 		t,
 		[]string{"Hel", "ell", "llo"},
-		New("Hello", Trigram).Tokenize(),
+		New(Trigram).Tokenize("Hello"),
 	)
 
 	assert.Equal(
 		t,
 		[]string{"こんに", "んにち", "にちは"},
-		New("こんにちは", Trigram).Tokenize(),
+		New(Trigram).Tokenize("こんにちは"),
 	)
 }
 
 func BenchmarkTokenizerUnigram(b *testing.B) {
 	for n := 0; n < b.N; n++ {
-		New(corpus, Unigram).Tokenize()
+		New(Unigram).Tokenize(corpus)
 	}
 }
 
 func BenchmarkTokenizerBigram(b *testing.B) {
 	for n := 0; n < b.N; n++ {
-		New(corpus, Bigram).Tokenize()
+		New(Bigram).Tokenize(corpus)
 	}
 }
 
 func BenchmarkTokenizerTrigram(b *testing.B) {
 	for n := 0; n < b.N; n++ {
-		New(corpus, Trigram).Tokenize()
+		New(Trigram).Tokenize(corpus)
 	}
 }
