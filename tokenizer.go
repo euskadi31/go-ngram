@@ -6,7 +6,7 @@ package ngram
 
 import "unicode/utf8"
 
-// Tokenizer interface
+// Tokenizer interface.
 type Tokenizer interface {
 	Tokenize(content string) []string
 }
@@ -15,7 +15,7 @@ type tokenizer struct {
 	size SizeType
 }
 
-// New N-gram Tokenizer
+// New N-gram Tokenizer.
 func New(size SizeType) Tokenizer {
 	return &tokenizer{
 		size: size,

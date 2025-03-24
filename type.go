@@ -4,10 +4,10 @@
 
 package ngram
 
-// SizeType type
+// SizeType type.
 type SizeType int
 
-// N-Gram size type
+// N-Gram size type.
 const (
 	Unigram SizeType = 1
 	Bigram  SizeType = 2
